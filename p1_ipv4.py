@@ -45,11 +45,9 @@ def ipv4_value(address):
     
     octet = address.split(".")
     total = 0
-    power = 0
-    for num in range(len(octet)):
+    for power in range(len(octet)):
         ip = int(octet.pop())
         total = ip * 256 ** power + total
-        power += 1
     return total
 
 
@@ -73,3 +71,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
